@@ -1,0 +1,64 @@
+<!DOCTYPE>
+<html>
+<head>
+  <title>LoginApp</title>
+  <link rel="stylesheet" href="/css/bootstrap.css"/>
+  <link rel="stylesheet" href="/css/style.css"/>
+</head>
+<body>
+  <div class="container">
+      <h1 class="display-5" style=margin-top:20px;>Login App</h1>
+    </div>
+  </div>
+
+  <div class="container">
+    <!-- Example row of columns -->
+
+
+
+    <div class="row" style=margin-top:20px;>
+
+      <div class="col-lg-12">
+        {{#if success_msg}}
+          <div class="alert alert-success">
+            {{success_msg}}
+          </div>
+        {{/if}}
+        {{#if error_msg}}
+          <div class="alert alert-danger">
+            {{error_msg}}
+          </div>
+        {{/if}}
+        {{#if error}}
+          <div class="alert alert-danger">
+            {{error}}
+          </div>
+        {{/if}}
+      </div>
+
+
+
+      {{#if user}}
+      <div class="col-md-3">
+        <a class="btn btn-secondary" href="/" role="button">Dashboard</a></p>
+      </div>
+      <div class="col-md-3">
+        <a class="btn btn-secondary" href="/users/logout" role="button">Logout</a></p>
+      </div>
+      {{else}}
+      <div class="col-md-3">
+        <a class="btn btn-secondary" href="/users/login" role="button">Login</a></p>
+      </div>
+      <div class="col-md-3">
+        <a class="btn btn-secondary" href="/users/register" role="button">Register</a></p>
+      </div>
+
+      {{/if}}
+
+    </div>
+
+    <hr>
+    {{{body}}}
+  </div>
+</body>
+</html>
